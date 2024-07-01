@@ -122,11 +122,12 @@
                         </goals>
                         <configuration>
                             <projectName>Final Project</projectName>
-                            <outputDirectory>target/reports/cucumber-reports</outputDirectory>
+                            <skip>false</skip>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <inputDirectory>${project.build.directory}/reports/cucumber-reports</inputDirectory>
                             <jsonFiles>
-                                 <param>target/reports/cucumber-reports/*.json</param>
+                                <param>**/*.json</param>
                             </jsonFiles>
-                            <parallelTesting>true</parallelTesting>
                         </configuration>
                     </execution>
                 </executions>

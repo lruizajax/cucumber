@@ -95,7 +95,6 @@
             <artifactId>cucumber-reporting</artifactId>
             <version>5.8.1</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -124,12 +123,13 @@
                         <configuration>
                             <projectName>Final Project</projectName>
                             <outputDirectory>target/reports/cucumber-reports</outputDirectory>
-                            <cucumberOutput>target/reports/cucumber-reports/cucumber.json</cucumberOutput>
+                            <jsonFiles>
+                                 <param>target/reports/cucumber-reports/*.json</param>
+                            </jsonFiles>
                             <parallelTesting>true</parallelTesting>
                         </configuration>
                     </execution>
                 </executions>
-
             </plugin>
         </plugins>
     </build>
